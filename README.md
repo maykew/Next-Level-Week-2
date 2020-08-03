@@ -27,7 +27,7 @@ Através desse método a equipe da Rocketseat pretende apresentar novas ferram
 
 <p align="justify">
 Este projeto faz parte da trilha Discovery,  que é recomendada a quem está começando do zero ou
-dando seus primeiros passos como um dev.</p>
+dando seus primeiros passos no desenvolvimento web.</p>
 
 Um evento online e totalmente gratuito que auxilia devs a dar o próximo passo na sua evolução.<br>
 
@@ -36,7 +36,7 @@ Instrutor do projeto: [Mayk Brito](https://github.com/maykbrito)
 
 ### :computer: Projeto
 
-O Ecoleta é um marketplace que ajuda pessoas a encontrarem pontos de coleta de resíduos de forma eficiente.
+Em breve
 
 ### :art: Layout
 
