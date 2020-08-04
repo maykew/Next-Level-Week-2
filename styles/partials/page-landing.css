@@ -1,0 +1,140 @@
+#page-landing {
+    background: var(--color-primary); /* cor de fundo */
+}
+
+#page-landing #container{
+    color: var(--color-text-in-primary); /* cor do texto */
+}
+
+.logo-container img {
+    height: 10rem; /* altura */
+}
+
+.logo-container {
+    text-align: center; /* alinhamento do texto */
+    margin-bottom: 3.2rem; /* margem na base */
+}
+
+.logo-container h2 {
+    font-weight: 500; /* peso da fonte */
+    font-size: 3.6rem; /* tamanho da fonte */
+    line-height: 4.6rem; /* altura da linha do texto */
+    margin-top: 0.8rem; /* margem no topo */
+}
+
+.hero-image {
+    width: 100%; /* largura */
+}
+
+.buttons-container {
+    display: flex; /* elementos ao lado */
+    justify-content: center; /* alinhamento */
+    margin: 3.2rem 0; /* espacamento */
+}
+
+.buttons-container a {
+    width: 30rem; /* largura */
+    height: 10.4rem; /* altura */
+    border-radius: 0.8rem; /* arrendondamento das bordas */
+    margin-right: 1.6rem; /* margem para separar botoes */
+
+    font: 700 2.4rem Archivo;
+
+    display: flex; /* elementos ao lado */
+    align-items: center; /* alinhamento */
+    justify-content: center; /* alinhamento */
+
+    text-decoration: none; /* tira linha da tag a */
+
+    transition: background 0.2s; /* transicao */
+
+    color: var(--color-button-text) /* cor do texto dos botoes */
+}
+
+.buttons-container a img {
+    width: 4rem; /* largura */
+    margin-right: 2.4rem; /* margen */
+}
+
+.buttons-container a.study {
+    background: var(--color-primary-lighter); /* cor de fundo */
+}
+
+/* propriedades aplicadas somente no estado hover(mouse em cima) */
+.buttons-container a.study:hover{
+    background: var(--color-primary-light); /* cor de fundo */
+}
+
+.buttons-container a.give-classes {
+    background: var(--color-secondary); /* cor de fundo */
+    margin-right: 0rem; /* margem do segundo botao */
+}
+
+/* propriedades aplicadas somente no estado hover(mouse em cima) */
+.buttons-container a.give-classes:hover{
+    background: var(--color-secondary-dark); /* cor de fundo */
+}
+
+.total-connections {
+    font-size: 1.8rem; /* tamanho da fonte */
+
+    /* alinhamento */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.total-connections img{
+    margin-left: 0.8rem; /* margem */
+}
+
+/* largura ate 399px, aplica as propriedades */
+@media (max-width: 699px){
+    :root {
+        font-size: 40%; /* modificar as medidas rem */
+    }
+}
+
+/* se a largura minima esta em 1100px (de 1100 para cima), aplica as propriedades */
+@media (min-width: 1100px){
+    #page-landing #container {
+        max-width: 1100px; /* largura maxima */
+        display: grid; /* faz um particionamento */
+        grid-template-columns: 2fr 1fr 2fr; /* 3 colunas */
+        grid-template-rows: 350px 1fr; /* 2 linhas */
+        grid-template-areas: 
+        "proffy image image"
+        "button button texting"; /* denominando areas */
+        
+        /*gap: 60px; espacamento entre as partes do grid*/
+        column-gap: 87px;
+        row-gap: 86px;
+    }
+
+    .logo-container{
+        grid-area: proffy; /* indica a area que ele pertence */
+        text-align: initial; /* alinhamento */
+        align-self: center; /* alinhamento */
+        margin: 0; /* margem */
+    }
+
+    .logo-container img {
+        height: 127px; /* altura */
+
+    }
+
+    .hero-image{
+        grid-area: image; /* indica a area que ele pertence */
+        height: 350px; /* altura */
+    }
+    .buttons-container{
+        grid-area: button; /* indica a area que ele pertence */
+        justify-content: flex-start; /* alinhamento */
+        margin: 0;
+    }
+    .total-connections{
+        grid-area: texting; /* indica a area que ele pertence */
+        justify-self: end; /* alinhamento */
+        font-size: 1.2rem; /* tamanho da fonte */
+    }
+}

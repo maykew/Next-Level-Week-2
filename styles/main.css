@@ -38,15 +38,13 @@
     /* content-box: padrao soma o conteudo com o padding e expande */
     box-sizing: border-box; /* define pelo tamanho da caixa e nao o conteudo (pela borda) */
 
-
-
     /* width: 300px largura 
        heigth: 300px altura
 
-       display: block linha por linha
-       display: inline lado a lado
-       display: flex elementos tem que ser flexiveis
-       display: grid ??
+       display: block - linha por linha
+       display: inline - lado a lado
+       display: flex - elementos tem que ser flexiveis
+       display: grid - faz um particionamento
     */
 }
 
@@ -57,9 +55,9 @@ body{
 
 body {
     background-color: var(--color-background); /*Cor de fundo*/
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
+    display: flex; /* posicionamento da caixa */
+    align-items: center; /* alinhamento */
+    justify-content: center; /* alinhamento */
 }
 
 body,
@@ -70,10 +68,20 @@ textarea{
     /*font-weight: 500; força da fonte
     font-family: Poppins; estilo da fonte
     font-size: 1.6rem; tamanho da fonte*/ 
+    
     color: var(--color-text-base) 
 }
 
 #container {
     width: 90vw; /* largura */
     max-width: 700px; /* largura maxima */
+}
+
+/* se a largura minima esta em 700px (de 700 para cima), aplica as propriedades */
+@media (min-width: 700px){
+    :root {
+
+        /* todo 1rem vai ser relativo a 10px */
+        font-size: 62.5%; /* tamanho da fonte */
+    }
 }

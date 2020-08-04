@@ -1,0 +1,35 @@
+#page-study #container{
+    width: 100vw; /* largura (todo o espaço visivel) */
+    height: 100vw; /* altura */
+}
+
+.page-header {
+    background-color: var(--color-primary); /* cor do fundo */
+    
+    display: flex; /* deixar ao lado */
+    flex-direction: column; /* vira colunas, alinha embaixo */
+}
+
+.page-header .top-bar-container {
+    width: 90%; /* largura */
+
+    margin: 0 auto; /* margem cima/baixo laterais */
+
+    /* alinhamento */
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}    
+
+.page-header .top-bar-container img {
+    height: 1.6rem; /* altura */
+}
+
+.page-header .top-bar-container a {
+    height: 3.2rem; /* altura */
+    transition: opacity 0.2;
+}
+
+.page-header .top-bar-container a:hover {
+    opacity: 0.6;
+}
