@@ -19,17 +19,275 @@
     display: flex; 
     align-items: center;
     justify-content: space-between;
+
+    padding: 1.6rem 0; /* ?? */
 }    
+
+.page-header .top-bar-container a {
+    height: 3.2rem; /* altura */
+    transition: opacity 0.2; /* transição de fundo */
+}
+
+.page-header .top-bar-container a:hover {
+    opacity: 0.6;
+}
 
 .page-header .top-bar-container img {
     height: 1.6rem; /* altura */
 }
 
-.page-header .top-bar-container a {
-    height: 3.2rem; /* altura */
-    transition: opacity 0.2;
+.page-header .header-content {
+    width: 90%; /* largura */
+    margin: 3.2rem auto; /* margem */
+
+    position: relative; /* relativo para posicionar o search-teachers */
 }
 
-.page-header .top-bar-container a:hover {
-    opacity: 0.6;
+.page-header .header-content strong {
+    font: 700 3.6rem Archivo; /* fonte */
+    line-height: 4.2rem; /* altura da linha */
+    color: var(--color-title-in-primary);
+}
+
+#search-teachers {
+    margin-top: 3.2rem; /* margem topo */
+}
+
+#search-teachers label {
+    color: var(--color-title-in-primary);
+}
+
+#search-teachers .select-block {
+    margin-bottom: 1.4rem;
+}
+
+#search-teachers button {
+    width: 100%; /* largura */
+    height: 5.6rem; /* altura */
+    background: var(--color-secondary); /* cor de fundo */
+    color: var(--color-button-text); /* cor do texto */
+    border: 0; /* borda */
+    border-radius: 0.8rem; /* arredondamento da borda */
+    cursor: pointer; /* mouse vira a mãozinha */
+    font: 700 1.6rem Archivo; /* fonte */
+    
+    /* alinhamento */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: background 0.2s; /* transição de fundo */
+    margin-top: 3.2rem; /* margin topo */
+}
+
+#search-teachers button:hover {
+    background-color: var(--color-secondary-dark);
+}
+
+.select-block label,
+.input-block label {
+    font-size: 1.4rem; /* tamanho fonte */
+    color: var(--color-text-complement);
+}
+
+.input-block input,
+.select-block select {
+    width: 100%; /* largura */
+    height: 5.6rem; /* altura */
+    margin-top: 0.8rem; /* margem topo */
+    border-radius: 0.8rem; /* arredondamento da borda */
+    background: var(--color-input-background); /* cor de fundo */
+    border: 1px solid var(--color-line-in-white); /* cor na linha */
+    outline: 0; /* retira destaque ao selecionar campo */
+    padding: 0 1.6rem; /* preenchimento lateral */
+    font: 1.6rem Archivo; /* fonte */
+}
+
+.input-block {
+    position: relative;
+}
+
+/* algum elemento em foco (ao clicar), procura o input-block e cria um elemento html */
+.input-block:focus-within::after {
+    content: ""; /* conteudo do elemento */
+
+    width: calc(100% - 3.2rem);  /* largura */
+    height: 2px; /* altura */
+    background: var(--color-primary-light); /* cor de fundo */
+
+    position: absolute; /* posi */
+    left: 1.6rem;
+    bottom: 0;
+}
+
+#page-study main {
+    margin: 3.2rem auto; /* margem */
+    width: 90%; /* largura */
+}
+
+#page-study article {
+    background-color: var(--color-box-base); /* cor do fundo */
+    border: 1px solid var(--color-line-in-white); /* cor da borda */
+    border-radius: 0.8rem; /* arredondamento da borda */
+    margin-top: 2.4rem; /* margem */
+}
+
+.teacher-item header {
+    padding: 3.2rem 2rem; /* preenchimento */
+
+    /* alinhamento */
+    display: flex;
+    align-items: center;
+}
+
+.teacher-item header img {
+    width: 8rem; /* largura */
+    height: 8rem; /* altura */
+    border-radius: 50%; /* arredendamento da borda */
+}
+
+.teacher-item header div {
+    margin-left: 2.4rem;
+}
+
+.teacher-item header div strong {
+    font: 700 2.4rem Archivo;
+    display: block; /* ocupar a linha toda */
+    color: var(--color-text-title)
+}
+
+.teacher-item header div span {
+    font-size: 1.6rem;
+    display: block; 
+    margin-top: 0.4rem; /* propriedade pode ser alterada com block e nao com inline */
+}
+
+/* > pega so o primeiro p */
+.teacher-item item > p {
+    padding: 0 2rem; /* preenchimento */
+    font-size: 1.6rem; /* tamanho da fonte */
+    line-height: 2.8rem; /* altura da linha*/
+}
+
+.teacher-item footer {
+    padding: 3.2rem 2rem; /* preenchimento */
+    background-color: var(--color-box-footer); /* cor de fundo */
+    border-top: 1px solid var(--color-line-in-white); /* linha de separação */
+    margin-top: 3.2rem;
+
+    /* alinhamento */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.teacher-item footer p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--color-text-complement);
+}
+
+.teacher-item footer p {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    display: block; /* ocupar a linha , evitando a quebra de texto */
+}
+
+.teacher-item footer button {
+    width: 20rem;
+    height: 5.6rem;
+    background: var(--color-secondary);
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.4rem Archivo;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; /* espaçamento constante entre os elementos */
+
+    text-decoration: none;
+
+    transition:  background 0.2s;
+    margin-left: 1.6rem;
+}
+
+.teacher-item footer button:hover {
+    background: var(--color-secondary-dark);
+}
+
+/* se a largura minima esta em 700px (de 700 para cima), aplica as propriedades */
+@media (min-width: 700px){
+    
+    #page-study #container {
+        max-width: 100vw;
+    }
+
+    .page-header {
+        height: 340px;
+    }
+
+    .page-header .top-bar-container {
+        max-width: 1100px;
+    }
+
+    .page-header .header-content {
+        max-width: 740px;
+        margin: 0 auto;
+
+        flex: 1 1; /* estica a caixa */
+        padding-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .page-header .header-content strong {
+        max-width: 350px;   
+    }
+
+    .teacher-item header,
+    .teacher-item footer {
+        padding: 32px;
+    }
+
+    #search-teachers {
+        display: grid; /* particionar */
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+        gap: 16px; /* espacamento */
+    
+        position: absolute; /* posiciona sobre a pagina toda */
+        bottom: -28px;
+    }
+
+    #page-study main{
+        padding: 32px 0;
+        max-width: 740px;
+        margin: 0 auto;
+    }
+
+    #search-teachers .select-block {
+        margin-bottom: 0;
+    }
+
+    /* > pega so o primeiro p */
+    .teacher-item > p {
+        padding: 0 32px;
+    }
+
+    #teacher-item footer p strong{
+        display: initial;
+        margin-left: 16px;
+    }
+
+    .teacher-item footer button {
+        width: 245px;
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    .teacher-item footer button img{
+        margin-right: 16px;
+    }
 }
