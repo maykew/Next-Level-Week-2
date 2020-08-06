@@ -1,0 +1,50 @@
+
+.select-block label,
+.input-block label,
+.textarea-block label {
+    font-size: 1.4rem; /* tamanho fonte */
+    color: var(--color-text-complement);
+}
+
+.input-block input,
+.select-block select,
+.textarea-block textarea {
+    width: 100%; /* largura */
+    height: 5.6rem; /* altura */
+    margin-top: 0.8rem; /* margem topo */
+    border-radius: 0.8rem; /* arredondamento da borda */
+    background: var(--color-input-background); /* cor de fundo */
+    border: 1px solid var(--color-line-in-white); /* cor na linha */
+    outline: 0; /* retira destaque ao selecionar campo */
+    padding: 0 1.6rem; /* preenchimento lateral */
+    font: 1.6rem Archivo; /* fonte */
+}
+
+.textarea-block textarea {
+    padding: 1.2rem 1.6rem; /* preenchimento */
+    height: 16rem; /* altura */
+
+    resize: vertical; /* movimenta apenas na vertical */
+}
+
+.input-block,
+.textarea-block {
+    position: relative;
+}
+/* algum elemento em foco (ao clicar), procura o input-block e cria um elemento html */
+.input-block:focus-within::after,
+.textarea-block:focus-within::after {
+    content: ""; /* conteudo do elemento */
+
+    width: calc(100% - 3.2rem);  /* largura */
+    height: 2px; /* altura */
+    background: var(--color-primary-light); /* cor de fundo */
+
+    position: absolute; /* posi */
+    left: 1.6rem;
+    bottom: 0;
+}
+
+.textarea-block:focus-within::after {
+    bottom: 7px;
+}

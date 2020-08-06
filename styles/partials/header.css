@@ -1,0 +1,90 @@
+
+.page-header {
+    background-color: var(--color-primary); /* cor do fundo */
+    
+    display: flex; /* deixar ao lado */
+    flex-direction: column; /* vira colunas, alinha embaixo */
+}
+
+.page-header .top-bar-container {
+    width: 90%; /* largura */
+
+    margin: 0 auto; /* margem cima/baixo laterais */
+
+    /* alinhamento */
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.6rem 0; /* ?? */
+}    
+
+.page-header .top-bar-container a {
+    height: 3.2rem; /* altura */
+    transition: opacity 0.2; /* transição de fundo */
+}
+
+.page-header .top-bar-container a:hover {
+    opacity: 0.6;
+}
+
+/* > img de primeiro nivel */
+.page-header .top-bar-container > img {
+    height: 1.6rem; /* altura */
+}
+
+.page-header .header-content {
+    width: 90%; /* largura */
+    margin: 3.2rem auto; /* margem */
+
+    position: relative; /* relativo para posicionar o search-teachers */
+}
+
+.page-header .header-content strong {
+    font: 700 3.6rem Archivo; /* fonte */
+    line-height: 4.2rem; /* altura da linha */
+    color: var(--color-title-in-primary);
+}
+
+.page-header .header-content p {
+    max-width: 30rem; /* largura maxima */
+    font-size: 1.6rem; /* tamanho da fonte */
+    line-height: 2.6rem; /* altura da linha */
+    color: var(--color-text-in-primary);
+    margin-top: 2.4rem; /* margen */
+
+}
+
+
+/* se a largura minima esta em 700px (de 700 para cima), aplica as propriedades */
+@media (min-width: 700px){
+
+    .page-header {
+        height: 340px;
+    }
+
+    .page-header .top-bar-container {
+        max-width: 1100px;
+    }
+
+    .page-header .header-content {
+        max-width: 740px;
+        margin: 0 auto;
+
+        flex: 1 1; /* estica a caixa */
+        padding-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .page-header .header-content strong {
+        max-width: 350px;   
+    }
+
+    .teacher-item header,
+    .teacher-item footer {
+        padding: 32px;
+    }
+
+}

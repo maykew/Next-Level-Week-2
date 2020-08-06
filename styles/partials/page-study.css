@@ -1,52 +1,6 @@
 #page-study #container{
     width: 100vw; /* largura (todo o espaço visivel) */
-    height: 100vw; /* altura */
-}
-
-.page-header {
-    background-color: var(--color-primary); /* cor do fundo */
-    
-    display: flex; /* deixar ao lado */
-    flex-direction: column; /* vira colunas, alinha embaixo */
-}
-
-.page-header .top-bar-container {
-    width: 90%; /* largura */
-
-    margin: 0 auto; /* margem cima/baixo laterais */
-
-    /* alinhamento */
-    display: flex; 
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 1.6rem 0; /* ?? */
-}    
-
-.page-header .top-bar-container a {
-    height: 3.2rem; /* altura */
-    transition: opacity 0.2; /* transição de fundo */
-}
-
-.page-header .top-bar-container a:hover {
-    opacity: 0.6;
-}
-
-.page-header .top-bar-container img {
-    height: 1.6rem; /* altura */
-}
-
-.page-header .header-content {
-    width: 90%; /* largura */
-    margin: 3.2rem auto; /* margem */
-
-    position: relative; /* relativo para posicionar o search-teachers */
-}
-
-.page-header .header-content strong {
-    font: 700 3.6rem Archivo; /* fonte */
-    line-height: 4.2rem; /* altura da linha */
-    color: var(--color-title-in-primary);
+    height: 100vh; /* altura */
 }
 
 #search-teachers {
@@ -82,42 +36,6 @@
 
 #search-teachers button:hover {
     background-color: var(--color-secondary-dark);
-}
-
-.select-block label,
-.input-block label {
-    font-size: 1.4rem; /* tamanho fonte */
-    color: var(--color-text-complement);
-}
-
-.input-block input,
-.select-block select {
-    width: 100%; /* largura */
-    height: 5.6rem; /* altura */
-    margin-top: 0.8rem; /* margem topo */
-    border-radius: 0.8rem; /* arredondamento da borda */
-    background: var(--color-input-background); /* cor de fundo */
-    border: 1px solid var(--color-line-in-white); /* cor na linha */
-    outline: 0; /* retira destaque ao selecionar campo */
-    padding: 0 1.6rem; /* preenchimento lateral */
-    font: 1.6rem Archivo; /* fonte */
-}
-
-.input-block {
-    position: relative;
-}
-
-/* algum elemento em foco (ao clicar), procura o input-block e cria um elemento html */
-.input-block:focus-within::after {
-    content: ""; /* conteudo do elemento */
-
-    width: calc(100% - 3.2rem);  /* largura */
-    height: 2px; /* altura */
-    background: var(--color-primary-light); /* cor de fundo */
-
-    position: absolute; /* posi */
-    left: 1.6rem;
-    bottom: 0;
 }
 
 #page-study main {
