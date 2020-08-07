@@ -135,6 +135,12 @@
     background: var(--color-secondary-dark);
 }
 
+#page-study main .no-results {
+    max-width: 30rem;
+    margin: 12rem auto;
+    text-align: center;
+}
+
 /* se a largura minima esta em 700px (de 700 para cima), aplica as propriedades */
 @media (min-width: 700px){
     

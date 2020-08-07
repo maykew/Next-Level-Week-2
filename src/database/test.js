@@ -1,5 +1,4 @@
 const Database = require('./db')
-const crateProffy = require('./createProffy')
 const createProffy = require('./createProffy')
 
 Database.then(async (db) => {
@@ -12,7 +11,7 @@ Database.then(async (db) => {
     }
 
     classValue = {
-        subject: "Tudo",
+        subject: 1,
         cost: "20",
     }
 
@@ -27,4 +26,26 @@ Database.then(async (db) => {
     await createProffy (db, {proffyValue, classValue, classScheduleValues})
 
     //consultar dados
+
+    //todos os proffys
+    const selectProffys = await db.all("SELECT * FROM proffys")
+
+    //classes de um professor
+    const selectClassesAndProffys = await db.all(`
+        SELECT classes.*, proffys.*
+        FROM proffys
+        JOIN classes ON (classes.proffy_id = proffy.id)
+        WHERE classes.proffy_id = 1;
+    `)
+
+    const selectClassesSchedules = await db.all(`
+        SELECT class_schedule.*
+        FROM class_schedule
+        WHERE class_schedule.class_id = classes.id
+        AND class_schedule.weekday = 
+        AND class_schedule.time_from <=
+        AND class_schedule.time_to >
+    `)
+
+
 })
