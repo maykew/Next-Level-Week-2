@@ -29,14 +29,12 @@ Através desse método a equipe da Rocketseat pretende apresentar novas ferram
 Este projeto faz parte da trilha Discovery,  que é recomendada a quem está começando do zero ou
 dando seus primeiros passos no desenvolvimento web.</p>
 
-Um evento online e totalmente gratuito que auxilia devs a dar o próximo passo na sua evolução.<br>
-
 Plataforma de educação em tecnologia [Rocketseat](https://github.com/Rocketseat)<br>
 Instrutor do projeto: [Mayk Brito](https://github.com/maykbrito)
 
 ### :computer: Projeto
 
-Em breve
+O Proffy é uma plataforma de estudos que ajuda estudantes a encontrarem aulas online de forma eficiente.
 
 ### :art: Layout
 
@@ -46,15 +44,18 @@ Em breve
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-Em breve
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/pt-br/)
+- [SQLite](https://www.sqlite.org/index.html)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
 
 ### :mortar_board: Como executar o projeto
 
 - Faça um clone deste repositório: `git clone https://github.com/maykew/Next-Level-Week-2.git`;
-- Entre no diretório Next-Level-Week-1;
+- Entre no diretório Next-Level-Week-2;
 - Instale as dependências : `npm install`;
-- Inicie a aplicação: `npm start`;
-- Acesse a aplicação pelo browser: `http://localhost:3000`;
+- Inicie a aplicação: `npm run dev`;
+- Acesse a aplicação pelo browser: `http://localhost:5500`;
 
 ### :family: Como contribuir
 

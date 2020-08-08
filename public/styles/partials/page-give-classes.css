@@ -150,6 +150,7 @@
     #page-give-classes #schedule-items .select-block+.input-block,
     #page-give-classes #schedule-items .input-block+.input-block {
         margin-top: 0;
+        margin-left: 2rem;
     }
 
     #page-give-classes main footer {
