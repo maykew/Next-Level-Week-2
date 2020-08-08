@@ -88,10 +88,14 @@
     margin-left: 0.8rem; /* margem */
 }
 
-/* largura ate 399px, aplica as propriedades */
-@media (max-width: 699px){
+/* largura ate 1100px, aplica as propriedades */
+@media (max-width: 1100px){
     :root {
         font-size: 40%; /* modificar as medidas rem */
+    }
+
+    .hero-image {
+        height: 45rem;
     }
 }
 
