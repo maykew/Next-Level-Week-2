@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  <strong>Next Level Week #2 - Proffy</strong>
+  <strong> 🚧 Next Level Week #2 - Proffy 🚧 (90% completo) </strong>
 </h3>
 
 <p align="center">
